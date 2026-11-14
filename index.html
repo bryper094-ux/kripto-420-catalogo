@@ -216,9 +216,12 @@ function precios(p) {
   const c = (t, v) => `<div><small>${t}</small><b class="${v ? '' : 'na'}">${v ? cop(v) : '—'}</b></div>`;
   return `<div class="precios">${c('Al detal', p.u)}${c('Por mayor · desde 10', p.x10 || p.x5)}</div>`;
 }
+/* orden del catálogo: del precio por mayor más bajo al más alto (si no tiene precio por mayor, usa el del detal) */
+const precioOrden = p => p.x10 || p.x5 || p.u || 1e9;
 function render() {
   $('#cats').innerHTML = CATS.map(([k, t]) => `<button class="chip" type="button" data-cat="${k}" aria-pressed="${st.cat === k}">${t}</button>`).join('');
-  const L = P.filter(p => p.disp !== 'agotado' && (st.cat === 'todos' || p.c === st.cat) && (!st.q || norm(p.n + ' ' + p.s).includes(norm(st.q))));
+  const L = P.filter(p => p.disp !== 'agotado' && (st.cat === 'todos' || p.c === st.cat) && (!st.q || norm(p.n + ' ' + p.s).includes(norm(st.q))))
+    .sort((a, b) => precioOrden(a) - precioOrden(b) || (a.u || 0) - (b.u || 0));
   $('#grid').innerHTML = L.length ? L.map(p => { const q = st.qty[p.id] || 0; const pr = promoDe(p.id); return `<article class="card ${q ? 'sel' : ''} ${pr ? 'prom' : ''}">
     <div class="mono${imgDe(p) ? ' wm' : ''}">${pr ? '<span class="badge">Promo hoy</span>' : p.nuevo || p.nov ? '<span class="badge">Nuevo</span>' : ''}${imgDe(p) ? `<img src="${imgDe(p)}" alt="${p.n}" loading="lazy">` : `<span>${p.s}</span>`}<em class="puffs">${p.puffs}${/\d/.test(p.puffs) && !/c\/u/.test(p.puffs) ? ' puffs' : ''}</em></div>
     <div class="body"><span class="cat">${CATS.find(c => c[0] === p.c)[1]}</span><h3>${p.n}</h3>${p.nov ? `<div class="nov">${String(p.nov).replace(/</g, '&lt;')}</div>` : ''}${precios(p)}
