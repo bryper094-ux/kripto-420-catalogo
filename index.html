@@ -224,7 +224,7 @@ function render() {
     <div class="body"><span class="cat">${CATS.find(c => c[0] === p.c)[1]}</span><h3>${p.n}</h3>${p.nov ? `<div class="nov">${String(p.nov).replace(/</g, '&lt;')}</div>` : ''}${precios(p)}
       <div class="pie"><span class="disp ${p.disp === 'pocas' ? 'poc' : 'ok'}">${p.disp === 'pocas' ? 'Últimas unidades' : 'Disponible'}</span>
         <div class="step" role="group" aria-label="Cantidad de ${p.n}"><button type="button" data-menos="${p.id}" aria-label="Quitar uno">−</button><output>${q}</output><button type="button" data-mas="${p.id}" aria-label="Agregar uno">+</button></div></div></div></article>`; }).join('')
-    : '<div class="vacio">No encontramos ese producto. Escríbenos y te contamos qué hay.</div>';
+    : `<div class="vacio">${P.length ? 'No encontramos ese producto. Escríbenos y te contamos qué hay.' : 'Cargando catálogo…'}</div>`;
   barra();
 }
 function mensaje() {
