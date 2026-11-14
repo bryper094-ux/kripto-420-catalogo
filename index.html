@@ -1,0 +1,361 @@
+<!doctype html><html><head><meta charset=utf8><meta name="robots" content="noindex,nofollow,noarchive"><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#faf9f5;color:#141413}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
+<title>Catálogo Kripto 420</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:opsz,wght@6..96,500;6..96,700&family=Figtree:wght@400;500;600;700&family=Josefin+Sans:wght@500;600&display=swap">
+<style>
+/* Layout: estuche oscuro con filete dorado — cabecera de marca, filtros, rejilla de fichas y barra fija de pedido */
+:root{
+  --bg:#0b0a09; --surface:#151411; --raise:#1d1b17; --line:#2c2821; --gold:#c9a25a; --gold-hi:#e8cd90; --ink:#efe8d8; --muted:#a39a87; --ok:#7fc495; --warn:#e8a15a;
+  --display:"Bodoni Moda","Didot","Bodoni 72",Georgia,serif; --body:"Figtree",system-ui,-apple-system,"Segoe UI",sans-serif; --label:"Josefin Sans","Avenir Next","Futura",system-ui,sans-serif;
+  color-scheme:dark;
+}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--ink);font:15px/1.5 var(--body);padding-inline:16px;padding-block:0 120px}
+.wrap{max-width:1080px;margin:0 auto;display:flex;flex-direction:column;gap:22px}
+header{display:flex;align-items:center;gap:16px;padding-block:22px 6px;border-bottom:1px solid var(--line)}
+.emb{width:64px;height:64px;border-radius:50%;flex:none;background:#000 url("kripto-emblema.jpg") center/112% no-repeat;box-shadow:0 0 0 1px #4a3d24,0 6px 24px rgba(201,162,90,.18)}
+.brand{display:flex;flex-direction:column;min-width:0;padding-bottom:14px}
+.brand h1{margin:0;font:700 clamp(30px,6vw,44px)/1 var(--display);letter-spacing:.06em;background:linear-gradient(180deg,#ecd49c,#c9a25a 55%,#9f7c3d);-webkit-background-clip:text;background-clip:text;color:transparent}
+.brand .tag{font:600 11px/1.6 var(--label);letter-spacing:.24em;text-transform:uppercase;color:var(--gold)}
+.brand small{color:var(--muted);font-size:13px}
+.aviso{border:1px solid var(--line);border-left:3px solid var(--warn);background:var(--surface);border-radius:8px;padding:10px 14px;font-size:13px;color:var(--muted)}
+.aviso b{color:var(--ink)}
+.tools{display:flex;gap:10px;flex-wrap:wrap;align-items:center}
+.chips{display:flex;gap:8px;flex-wrap:wrap}
+.chip{font:600 12px var(--label);letter-spacing:.12em;text-transform:uppercase;padding:9px 14px;border-radius:99px;border:1px solid var(--line);background:transparent;color:var(--muted);cursor:pointer}
+.chip[aria-pressed="true"]{background:var(--gold);color:#17110a;border-color:var(--gold)}
+.chip:focus-visible,button:focus-visible,input:focus-visible,a:focus-visible{outline:2px solid var(--gold-hi);outline-offset:2px}
+#q{flex:1;min-width:180px;background:var(--surface);border:1px solid var(--line);color:var(--ink);border-radius:99px;padding:10px 16px;font:15px var(--body)}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:14px}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:12px;overflow:hidden;display:flex;flex-direction:column;min-width:0}
+.card.sel{border-color:var(--gold)}
+.mono{aspect-ratio:16/9;max-width:100%;display:grid;place-items:center;background:radial-gradient(120% 90% at 30% 20%,#2a2419 0%,#12100d 70%);border-bottom:1px solid var(--line);position:relative}
+.mono img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.mono.wm::after{content:"";position:absolute;right:10px;top:10px;width:34px;height:34px;border-radius:50%;background:url("kripto-emblema.jpg") center/112% no-repeat;opacity:.38;mix-blend-mode:screen;pointer-events:none}
+.mono span{font:700 clamp(28px,5vw,40px)/1 var(--display);letter-spacing:.08em;color:var(--gold)}
+.mono .puffs{position:absolute;right:10px;bottom:10px;font:600 11px var(--label);letter-spacing:.14em;color:var(--ink);background:rgba(0,0,0,.55);border:1px solid #4a3d24;border-radius:99px;padding:4px 9px}
+.body{padding:14px;display:flex;flex-direction:column;gap:10px;flex:1}
+.body h3{margin:0;font:600 17px/1.25 var(--body)}
+.nov{font-size:13px;color:var(--gold-hi);border-left:2px solid var(--gold);padding-left:8px}
+.body .cat{font:600 10.5px var(--label);letter-spacing:.16em;text-transform:uppercase;color:var(--muted)}
+.precios{display:grid;grid-template-columns:repeat(2,1fr);gap:6px;font-variant-numeric:tabular-nums}
+.precios div{background:var(--raise);border-radius:8px;padding:7px 8px;display:flex;flex-direction:column}
+.precios small{font:600 10px var(--label);letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+.precios b{font-size:14px}
+.precios .na{color:var(--muted);font-weight:500}
+.consulta{font-size:13px;color:var(--muted);background:var(--raise);border-radius:8px;padding:9px 10px}
+.pie{display:flex;align-items:center;justify-content:space-between;gap:8px;margin-top:auto}
+.disp{font:600 11px var(--label);letter-spacing:.1em;text-transform:uppercase;padding:4px 9px;border-radius:99px;border:1px solid currentColor}
+.disp.ok{color:var(--ok)} .disp.poc{color:var(--warn)}
+.step{display:flex;align-items:center;border:1px solid var(--line);border-radius:99px;overflow:hidden}
+.step button{width:36px;height:36px;border:0;background:var(--raise);color:var(--ink);font-size:18px;cursor:pointer}
+.step output{min-width:34px;text-align:center;font-variant-numeric:tabular-nums;font-weight:700}
+.vacio{color:var(--muted);text-align:center;padding:30px 0}
+.barra{position:fixed;left:0;right:0;bottom:0;padding:12px 16px calc(12px + env(safe-area-inset-bottom,0px));background:rgba(11,10,9,.94);backdrop-filter:blur(8px);border-top:1px solid #4a3d24;z-index:5}
+.barra .in{max-width:1080px;margin:0 auto;display:flex;gap:12px;align-items:center;justify-content:space-between;flex-wrap:wrap}
+.barra .res{font-size:14px;color:var(--muted);min-width:0}
+.barra .res b{color:var(--ink)}
+.wa{display:inline-flex;align-items:center;gap:8px;background:var(--gold);color:#17110a;font:700 15px var(--body);padding:12px 20px;border-radius:99px;text-decoration:none}
+.num{font:600 13px var(--body);color:var(--muted);background:none;border:1px dashed var(--line);border-radius:99px;padding:8px 12px;cursor:pointer}
+footer{color:var(--muted);font-size:12.5px;border-top:1px solid var(--line);padding-top:14px}
+.promos{display:flex;flex-direction:column;gap:10px}
+.promo{position:relative;overflow:hidden;border:1px solid var(--gold);border-radius:12px;padding:14px 16px;background:linear-gradient(120deg,#2b220f 0%,#151411 60%);display:flex;gap:14px;align-items:center;flex-wrap:wrap}
+.promo .tag{font:700 11px var(--label);letter-spacing:.2em;text-transform:uppercase;color:#17110a;background:var(--gold);border-radius:99px;padding:5px 10px}
+.promo .txt{flex:1;min-width:200px;display:flex;flex-direction:column;gap:2px}
+.promo .txt b{font:700 20px/1.2 var(--display);color:var(--gold-hi)}
+.promo .txt span{color:var(--muted);font-size:13.5px}
+.promo .px{display:flex;align-items:baseline;gap:8px;font-variant-numeric:tabular-nums}
+.promo .px s{color:var(--muted)}
+.promo .px strong{font:700 26px var(--body);color:var(--ink)}
+.promo .reloj{font:600 12px var(--label);letter-spacing:.1em;color:var(--warn);text-transform:uppercase}
+.promo .add{font:700 14px var(--body);padding:10px 16px;border-radius:99px;border:0;background:var(--gold);color:#17110a;cursor:pointer}
+.card.prom{border-color:var(--gold)}
+.badge{position:absolute;left:10px;top:10px;font:700 10.5px var(--label);letter-spacing:.16em;text-transform:uppercase;background:var(--gold);color:#17110a;border-radius:99px;padding:5px 9px}
+.ppromo{background:#2b220f;border:1px solid #4a3d24;border-radius:8px;padding:8px 10px;display:flex;justify-content:space-between;align-items:baseline;gap:8px;font-variant-numeric:tabular-nums}
+.ppromo s{color:var(--muted);font-size:13px}
+.ppromo b{font-size:18px;color:var(--gold-hi)}
+.ppromo small{color:var(--muted);font-size:12px}
+.dueno{font:600 12px var(--label);letter-spacing:.12em;text-transform:uppercase;color:var(--gold);background:none;border:1px solid #4a3d24;border-radius:99px;padding:8px 12px;cursor:pointer;align-self:flex-start}
+dialog.ed{background:var(--surface);color:var(--ink);border:1px solid #4a3d24;border-radius:14px;padding:0;width:min(560px,calc(100vw - 32px))}
+dialog.ed::backdrop{background:rgba(0,0,0,.7)}
+.ed .h{display:flex;justify-content:space-between;align-items:center;padding:14px 16px;border-bottom:1px solid var(--line)}
+.ed .h h2{margin:0;font:700 20px var(--display);color:var(--gold-hi)}
+.ed .b{padding:14px 16px;display:flex;flex-direction:column;gap:12px;max-height:70vh;overflow:auto}
+.ed label{display:flex;flex-direction:column;gap:4px;font-size:13px;color:var(--muted)}
+.ed input,.ed select{background:var(--raise);border:1px solid var(--line);color:var(--ink);border-radius:8px;padding:9px 10px;font:15px var(--body);width:100%}
+.ed .g{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+.ed .lst{display:flex;flex-direction:column;gap:8px}
+.ed .it{display:flex;justify-content:space-between;gap:10px;align-items:center;background:var(--raise);border-radius:8px;padding:9px 10px;font-size:14px}
+.ed .it button,.ed .x{background:none;border:1px solid var(--line);color:var(--muted);border-radius:99px;padding:6px 10px;cursor:pointer}
+.ed .f{display:flex;justify-content:flex-end;gap:8px;padding:12px 16px;border-top:1px solid var(--line)}
+.ed .msg{font-size:13px;color:var(--warn)}
+@media (max-width:440px){.ed .g{grid-template-columns:1fr}}
+/* puerta de edad */
+.gate{position:fixed;inset:0;z-index:20;background:radial-gradient(80% 60% at 50% 30%,#1c1810,#070605 75%);display:grid;place-items:center;padding:24px}
+.gate .box{max-width:420px;text-align:center;display:flex;flex-direction:column;align-items:center;gap:14px}
+.gate .emb{width:110px;height:110px}
+.gate h2{margin:0;font:700 26px/1.2 var(--display);color:var(--gold-hi);text-wrap:balance}
+.gate p{margin:0;color:var(--muted)}
+.gate .acts{display:flex;gap:10px;flex-wrap:wrap;justify-content:center}
+.btn{font:700 15px var(--body);padding:12px 22px;border-radius:99px;cursor:pointer;border:1px solid var(--gold)}
+.btn.si{background:var(--gold);color:#17110a}
+.btn.no{background:transparent;color:var(--gold)}
+@media (prefers-reduced-motion:no-preference){.card{transition:border-color .15s}}
+@media (max-width:440px){.precios{grid-template-columns:repeat(2,minmax(0,1fr))}.barra .in{justify-content:center}}
+</style>
+
+<div class="gate" id="gate" role="dialog" aria-modal="true" aria-labelledby="gate-t">
+  <div class="box">
+    <div class="emb" role="img" aria-label="Emblema Kripto 420"></div>
+    <h2 id="gate-t">Catálogo solo para mayores de 18 años</h2>
+    <p>Estos productos contienen nicotina. La venta a menores de edad está prohibida en Colombia.</p>
+    <div class="acts"><button class="btn si" id="g-si" type="button">Tengo 18 años o más</button><button class="btn no" id="g-no" type="button">Soy menor de edad</button></div>
+    <p id="g-msg" hidden>No puedes ver este catálogo. Gracias por respetar la ley.</p>
+  </div>
+</div>
+
+<div class="wrap" id="app" hidden>
+  <header>
+    <div class="emb" role="img" aria-label="Emblema Kripto 420"></div>
+    <div class="brand"><h1>KRIPTO 420</h1><span class="tag">Ventas por mayor y al detal</span><small>Florencia, Caquetá · catálogo de noviembre 2026</small></div>
+  </header>
+  <div class="aviso"><b>Productos con nicotina. Nocivos para la salud.</b> Prohibida la venta a menores de 18 años. Precios en pesos colombianos; por mayor desde 10 unidades del mismo producto.</div>
+  <div class="promos" id="promos"></div>
+  <div style="display:flex;gap:8px;flex-wrap:wrap"><button class="dueno" id="dueno" type="button" hidden>Gestionar promociones</button><button class="dueno" id="dueno-p" type="button" hidden>Gestionar productos</button></div>
+  <div class="tools">
+    <div class="chips" id="cats"></div>
+    <input type="search" id="q" placeholder="Buscar: Dojo, Nimmbox, Chillax…" aria-label="Buscar producto">
+  </div>
+  <div class="grid" id="grid"></div>
+  <footer>Disponibilidad sujeta a confirmación por WhatsApp. Elige cantidades y presiona “Pedir por WhatsApp”: el mensaje sale con tu lista lista para enviar.</footer>
+</div>
+
+<div class="barra" id="barra" hidden>
+  <div class="in">
+    <div class="res" id="res">Elige productos para armar tu pedido</div>
+    <div style="display:flex;gap:8px;flex-wrap:wrap;align-items:center">
+      <button class="num" id="num" type="button" title="Copiar número">WhatsApp 322 820 4291</button>
+      <a class="wa" id="wa" href="#" target="_blank" rel="noopener">Pedir por WhatsApp</a>
+    </div>
+  </div>
+</div>
+
+<dialog class="ed" id="edp">
+  <div class="h"><h2 id="edp-t">Productos del catálogo</h2><button class="x" type="button" data-pcerrar="1">Cerrar</button></div>
+  <div class="b" id="edp-b"></div>
+  <div class="f" id="edp-f"></div>
+</dialog>
+<dialog class="ed" id="ed">
+  <div class="h"><h2>Promociones</h2><button class="x" type="button" data-cerrar="1">Cerrar</button></div>
+  <div class="b">
+    <div class="lst" id="ed-lst"></div>
+    <div style="font:600 12px var(--label);letter-spacing:.14em;text-transform:uppercase;color:var(--gold)">Nueva promoción</div>
+    <label>Producto<select id="ed-prod"></select></label>
+    <div class="g">
+      <label>Precio de promoción (c/u)<input id="ed-precio" type="number" min="0" step="500" inputmode="numeric"></label>
+      <label>Precio normal (tachado)<input id="ed-antes" type="number" min="0" step="500" inputmode="numeric"></label>
+      <label>Desde cuántas unidades<input id="ed-min" type="number" min="1" value="1" inputmode="numeric"></label>
+      <label>¿Cuándo?<select id="ed-tipo"><option value="dia">Solo un día</option><option value="semanal">Cada semana</option></select></label>
+      <label id="ed-fecha-l">Día<input id="ed-fecha" type="date"></label>
+      <label id="ed-dow-l" hidden>Día de la semana<select id="ed-dow"><option value="1">Lunes</option><option value="2">Martes</option><option value="3">Miércoles</option><option value="4" selected>Jueves</option><option value="5">Viernes</option><option value="6">Sábado</option><option value="0">Domingo</option></select></label>
+      <label>Desde la hora<input id="ed-hd" type="time" value="08:00"></label>
+      <label>Hasta la hora<input id="ed-hh" type="time" value="20:00"></label>
+    </div>
+    <label>Texto corto (opcional)<input id="ed-txt" maxlength="80" placeholder="Ej: Jueves de esencias"></label>
+    <div class="msg" id="ed-msg" hidden></div>
+  </div>
+  <div class="f"><button class="btn no" type="button" data-cerrar="1">Cancelar</button><button class="btn si" type="button" id="ed-add">Publicar promoción</button></div>
+</dialog>
+
+<script>
+const WA = '573228204291';
+const CATS = [['todos', 'Todos'], ['desechable', 'Desechables'], ['pod', 'Pods y baterías'], ['capsula', 'Cápsulas y esencias']];
+let P = [];
+const $ = s => document.querySelector(s);
+const DIAS = ['domingo', 'lunes', 'martes', 'miércoles', 'jueves', 'viernes', 'sábado'];
+let PROMOS = [], art = null, puedeEditar = false;
+let BASE = [], AJ = {}, EX = [], TODOS = [];
+const IMG_LOCAL = {};
+function mezclar() { TODOS = [...BASE.map(p => ({ ...p, ...(AJ[p.id] || {}), base: true })), ...EX.map(p => ({ ...p, extra: true }))]; P = TODOS.filter(p => !p.oculto); }
+const imgDe = p => IMG_LOCAL[p.id] || p.img;
+const hhmm = d => String(d.getHours()).padStart(2, '0') + ':' + String(d.getMinutes()).padStart(2, '0');
+const isoHoy = () => { const d = new Date(); return d.getFullYear() + '-' + String(d.getMonth() + 1).padStart(2, '0') + '-' + String(d.getDate()).padStart(2, '0'); };
+function activa(x, ahora = new Date()) {
+  const h = hhmm(ahora), dentro = h >= (x.desde || '00:00') && h < (x.hasta || '23:59');
+  if (x.tipo === 'semanal') return Number(x.dia) === ahora.getDay() && dentro;
+  return x.fecha === isoHoy() && dentro;
+}
+const promoDe = id => PROMOS.find(x => x.p === id && activa(x));
+function quedan(x) { const [H, M] = (x.hasta || '23:59').split(':').map(Number), fin = new Date(); fin.setHours(H, M, 0, 0); const m = Math.max(0, Math.round((fin - new Date()) / 60000)); return m >= 60 ? `${Math.floor(m / 60)} h ${m % 60} min` : `${m} min`; }
+function pintarPromos() {
+  const act = PROMOS.filter(x => activa(x));
+  $('#promos').innerHTML = act.map(x => { const p = P.find(q => q.id === x.p); if (!p) return '';
+    return `<div class="promo"><span class="tag">${x.tipo === 'semanal' ? 'Promo del ' + DIAS[x.dia] : 'Solo por hoy'}</span>
+      <div class="txt"><b>${x.txt ? x.txt.replace(/</g, '&lt;') : p.n}</b><span>${p.n}${x.min > 1 ? ` · desde ${x.min} und` : ''} · hasta las ${x.hasta}</span></div>
+      <div class="px">${x.antes ? `<s>${cop(x.antes)}</s>` : ''}<strong>${cop(x.precio)}</strong></div>
+      <span class="reloj">Termina en ${quedan(x)}</span>
+      <button class="add" type="button" data-mas="${p.id}" data-min="${x.min || 1}">Agregar</button></div>`; }).join('');
+}
+async function cargarPromos() {
+  try { const r = await fetch('productos.json', { cache: 'no-store' }); if (r.ok) { const d = await r.json(); if (Array.isArray(d)) BASE = d; } } catch (e) {}
+  try { const r = await fetch('ajustes.json', { cache: 'no-store' }); if (r.ok) { const d = await r.json(); if (d && typeof d === 'object' && !Array.isArray(d)) AJ = d; } } catch (e) {}
+  try { const r = await fetch('extras.json', { cache: 'no-store' }); if (r.ok) { const d = await r.json(); if (Array.isArray(d)) EX = d; } } catch (e) {}
+  mezclar();
+  if (!P.length) { $('#grid').innerHTML = '<div class="vacio">No se pudo cargar el catálogo. Escríbenos por WhatsApp y te lo enviamos.</div>'; }
+  try { const r = await fetch('promos.json', { cache: 'no-store' }); if (r.ok) { const d = await r.json(); if (Array.isArray(d)) PROMOS = d; } } catch (e) {}
+  pintarPromos(); render();
+}
+const cop = v => '$' + Math.round(v).toLocaleString('es-CO');
+const st = { cat: 'todos', q: '', qty: {} };
+const norm = s => String(s).toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g, '');
+
+function precios(p) {
+  const x = promoDe(p.id);
+  if (x) return `<div class="ppromo"><span>${x.antes ? `<s>${cop(x.antes)}</s> ` : ''}<b>${cop(x.precio)}</b></span><small>${x.min > 1 ? 'desde ' + x.min + ' und · ' : ''}hasta ${x.hasta}</small></div>`;
+  if (!p.u && !p.x5 && !p.x10) return '<div class="consulta">Precio por WhatsApp</div>';
+  const c = (t, v) => `<div><small>${t}</small><b class="${v ? '' : 'na'}">${v ? cop(v) : '—'}</b></div>`;
+  return `<div class="precios">${c('Al detal', p.u)}${c('Por mayor · desde 10', p.x10 || p.x5)}</div>`;
+}
+function render() {
+  $('#cats').innerHTML = CATS.map(([k, t]) => `<button class="chip" type="button" data-cat="${k}" aria-pressed="${st.cat === k}">${t}</button>`).join('');
+  const L = P.filter(p => p.disp !== 'agotado' && (st.cat === 'todos' || p.c === st.cat) && (!st.q || norm(p.n + ' ' + p.s).includes(norm(st.q))));
+  $('#grid').innerHTML = L.length ? L.map(p => { const q = st.qty[p.id] || 0; const pr = promoDe(p.id); return `<article class="card ${q ? 'sel' : ''} ${pr ? 'prom' : ''}">
+    <div class="mono${imgDe(p) ? ' wm' : ''}">${pr ? '<span class="badge">Promo hoy</span>' : p.nuevo || p.nov ? '<span class="badge">Nuevo</span>' : ''}${imgDe(p) ? `<img src="${imgDe(p)}" alt="${p.n}" loading="lazy">` : `<span>${p.s}</span>`}<em class="puffs">${p.puffs}${/\d/.test(p.puffs) && !/c\/u/.test(p.puffs) ? ' puffs' : ''}</em></div>
+    <div class="body"><span class="cat">${CATS.find(c => c[0] === p.c)[1]}</span><h3>${p.n}</h3>${p.nov ? `<div class="nov">${String(p.nov).replace(/</g, '&lt;')}</div>` : ''}${precios(p)}
+      <div class="pie"><span class="disp ${p.disp === 'pocas' ? 'poc' : 'ok'}">${p.disp === 'pocas' ? 'Últimas unidades' : 'Disponible'}</span>
+        <div class="step" role="group" aria-label="Cantidad de ${p.n}"><button type="button" data-menos="${p.id}" aria-label="Quitar uno">−</button><output>${q}</output><button type="button" data-mas="${p.id}" aria-label="Agregar uno">+</button></div></div></div></article>`; }).join('')
+    : '<div class="vacio">No encontramos ese producto. Escríbenos y te contamos qué hay.</div>';
+  barra();
+}
+function mensaje() {
+  const it = P.filter(p => st.qty[p.id]);
+  if (!it.length) return 'Hola Kripto 420, vi el catálogo y quiero más información.';
+  return 'Hola Kripto 420, vi el catálogo y me interesa:\n' + it.map(p => { const x = promoDe(p.id); return `- ${st.qty[p.id]} ${p.n}${x && st.qty[p.id] >= (x.min || 1) ? ` (promo a ${cop(x.precio)})` : ''}`; }).join('\n') + '\n¿Me confirmas disponibilidad y precio?';
+}
+function barra() {
+  const it = P.filter(p => st.qty[p.id]), u = it.reduce((a, p) => a + st.qty[p.id], 0);
+  $('#res').innerHTML = u ? `<b>${u} und</b> · ${it.length} producto${it.length === 1 ? '' : 's'} en tu pedido` : 'Elige productos para armar tu pedido';
+  $('#wa').href = 'https://wa.me/' + WA + '?text=' + encodeURIComponent(mensaje());
+  $('#wa').textContent = u ? 'Pedir por WhatsApp' : 'Escribir por WhatsApp';
+}
+document.addEventListener('click', async e => {
+  const t = e.target.closest('[data-cat],[data-mas],[data-menos]');
+  if (!t) return;
+  if (t.dataset.cat) { st.cat = t.dataset.cat; render(); return; }
+  const id = t.dataset.mas || t.dataset.menos, p = P.find(x => x.id === id);
+  const v = t.dataset.min ? Math.max(st.qty[id] || 0, Number(t.dataset.min)) : (st.qty[id] || 0) + (t.dataset.mas ? 1 : -1);
+  st.qty[id] = Math.max(0, Math.min(v, 99));
+  render();
+});
+$('#q').addEventListener('input', e => { st.q = e.target.value; render(); });
+$('#num').addEventListener('click', async () => { try { await navigator.clipboard.writeText('3228204291'); $('#num').textContent = 'Número copiado'; } catch (err) { $('#num').textContent = '322 820 4291'; } });
+function entrar() { $('#gate').hidden = true; $('#app').hidden = false; $('#barra').hidden = false; render(); cargarPromos(); }
+setInterval(() => { if (!$('#app').hidden) { pintarPromos(); render(); } }, 60000);
+/* dueño: crear y quitar promociones (se guardan en promos.json) */
+(async () => {
+  try { const u = window.claude?.use ? await window.claude.use('user') : null; puedeEditar = !!(u && await u.canEdit()); } catch (e) { puedeEditar = false; }
+  try { art = puedeEditar && window.claude?.use ? await window.claude.use('artifact') : null; } catch (e) { art = null; }
+  $('#dueno').hidden = !(puedeEditar && art); $('#dueno-p').hidden = !(puedeEditar && art);
+  const m = (location.hash || '').match(/^#promo\.([a-z0-9-]+)\.(\d+)\.(\d+)$/i);
+  if (m && puedeEditar && art) { const espera = () => P.length ? (abrirEditor(), $('#ed-prod').value = m[1], syncEd(), $('#ed-precio').value = m[2], $('#ed-antes').value = m[3]) : setTimeout(espera, 300); if ($('#app').hidden) entrar(); espera(); }
+})();
+function abrirEditor() {
+  $('#ed-prod').innerHTML = P.filter(p => p.disp !== 'agotado').map(p => `<option value="${p.id}">${p.n}</option>`).join('');
+  $('#ed-fecha').value = isoHoy(); $('#ed-msg').hidden = true; syncEd(); listaEd(); $('#ed').showModal();
+}
+function syncEd() { const p = P.find(x => x.id === $('#ed-prod').value); $('#ed-antes').value = p ? (p.x10 || p.x5 || p.u || '') : ''; const s = $('#ed-tipo').value === 'semanal'; $('#ed-dow-l').hidden = !s; $('#ed-fecha-l').hidden = s; }
+function listaEd() {
+  $('#ed-lst').innerHTML = PROMOS.length ? PROMOS.map((x, i) => { const p = P.find(q => q.id === x.p); return `<div class="it"><span><b>${p ? p.n : x.p}</b> a ${cop(x.precio)} · ${x.tipo === 'semanal' ? 'cada ' + DIAS[x.dia] : x.fecha} · ${x.desde}–${x.hasta}${activa(x) ? ' · <span style="color:var(--ok)">activa ahora</span>' : ''}</span><button type="button" data-quitar="${i}">Quitar</button></div>`; }).join('') : '<div style="color:var(--muted);font-size:14px">No hay promociones guardadas.</div>';
+}
+async function guardar(lista, btn) {
+  const msg = $('#ed-msg'); msg.hidden = true; if (btn) btn.disabled = true;
+  try { await art.publish({ 'promos.json': { content: JSON.stringify(lista, null, 1), contentType: 'application/json' } }); PROMOS = lista; listaEd(); pintarPromos(); render(); return true; }
+  catch (e) {
+    msg.hidden = false;
+    msg.textContent = e?.code === 'capability_disabled' || e?.code === 'not_granted' ? 'Desde aquí no se puede guardar (por ejemplo, si el catálogo tiene enlace público). Pídele a Claude en el chat que publique la promoción.'
+      : e?.code === 'conflict' ? 'Alguien guardó otra versión al mismo tiempo. La página se va a recargar; vuelve a intentarlo.'
+      : e?.code === 'not_writer' ? 'Tu usuario no tiene permiso para cambiar este catálogo.' : 'No se pudo guardar. Intenta de nuevo en un momento.';
+    return false;
+  } finally { if (btn) btn.disabled = false; }
+}
+$('#dueno').addEventListener('click', abrirEditor);
+/* dueño: agregar y editar productos a mano (extras.json = productos solo del catálogo; ajustes.json = cambios sobre los que vienen del inventario) */
+const esc = t => String(t ?? '').replace(/[&<>"]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
+let edId = null, edFoto = null;
+function listaProductos() {
+  edId = null; edFoto = null; $('#edp-t').textContent = 'Productos del catálogo';
+  $('#edp-b').innerHTML = `<div style="color:var(--muted);font-size:13px">Los productos del inventario se actualizan solos desde la app. Aquí puedes cambiarles la foto, el precio que se muestra, la disponibilidad o esconderlos, y agregar productos que solo van en el catálogo.</div>
+    <div class="lst">${TODOS.map(p => `<div class="it"><span><b>${esc(p.n)}</b> · ${p.u ? cop(p.u) : 'sin precio'}${p.oculto ? ' · <span style="color:var(--warn)">oculto</span>' : ''}${p.extra ? ' · <span style="color:var(--gold)">solo catálogo</span>' : ''}</span><button type="button" data-pedit="${esc(p.id)}">Editar</button></div>`).join('')}</div>`;
+  $('#edp-f').innerHTML = `<button class="btn no" type="button" data-pcerrar="1">Cerrar</button><button class="btn si" type="button" id="edp-nuevo">+ Agregar producto</button>`;
+}
+function formProducto(p) {
+  edId = p ? p.id : null; edFoto = null; const v = p || { n: '', c: 'desechable', puffs: '', u: 0, x5: 0, disp: 'ok', nov: '', oculto: false };
+  $('#edp-t').textContent = p ? 'Editar producto' : 'Nuevo producto';
+  $('#edp-b').innerHTML = `<label>Nombre<input id="p-n" value="${esc(v.n)}" ${p && p.base ? 'disabled' : ''} placeholder="Ej: Waka Solo2 · Fresa"></label>
+    <div class="g"><label>Categoría<select id="p-c">${CATS.slice(1).map(([k, t]) => `<option value="${k}" ${v.c === k ? 'selected' : ''}>${t}</option>`).join('')}</select></label>
+    <label>Puffs (texto corto)<input id="p-puffs" value="${esc(v.puffs)}" placeholder="Ej: 40K"></label>
+    <label>Precio al detal<input id="p-u" type="number" min="0" step="500" inputmode="numeric" value="${v.u || ''}"></label>
+    <label>Precio por mayor<input id="p-x5" type="number" min="0" step="500" inputmode="numeric" value="${v.x5 || v.x10 || ''}"></label>
+    <label>Disponibilidad<select id="p-disp"><option value="ok" ${v.disp === 'ok' ? 'selected' : ''}>Disponible</option><option value="pocas" ${v.disp === 'pocas' ? 'selected' : ''}>Últimas unidades</option><option value="agotado" ${v.disp === 'agotado' ? 'selected' : ''}>Agotado</option></select></label>
+    <label>Foto<input id="p-foto" type="file" accept="image/*"></label></div>
+    <div id="p-prev">${imgDe(v) ? `<img src="${imgDe(v)}" alt="" style="max-height:140px;border-radius:8px">` : ''}</div>
+    <label>Novedad (opcional)<input id="p-nov" maxlength="90" value="${esc(v.nov)}" placeholder="Ej: Nuevos sabores"></label>
+    <label style="flex-direction:row;align-items:center;gap:8px"><input id="p-oc" type="checkbox" style="width:auto" ${v.oculto ? 'checked' : ''}> No mostrar en el catálogo</label>
+    ${p && p.base ? '<div style="color:var(--muted);font-size:12.5px">Este producto viene del inventario: la disponibilidad se actualiza sola dos veces al día, salvo que la cambies aquí.</div>' : ''}
+    <div class="msg" id="p-msg" hidden></div>`;
+  $('#edp-f').innerHTML = `${p && p.extra ? '<button class="btn no" type="button" id="p-borrar">Quitar del catálogo</button>' : ''}<button class="btn no" type="button" id="p-volver">Volver</button><button class="btn si" type="button" id="p-guardar">Guardar</button>`;
+  $('#p-foto').addEventListener('change', async e => { const f = e.target.files[0]; if (!f) return; edFoto = await reducir(f); $('#p-prev').innerHTML = `<img src="${URL.createObjectURL(edFoto)}" alt="" style="max-height:140px;border-radius:8px">`; });
+}
+async function reducir(file, max = 1400) {
+  try { const bmp = await createImageBitmap(file); const k = Math.min(1, max / Math.max(bmp.width, bmp.height)); const c = document.createElement('canvas'); c.width = Math.round(bmp.width * k); c.height = Math.round(bmp.height * k); c.getContext('2d').drawImage(bmp, 0, 0, c.width, c.height); return await new Promise(r => c.toBlob(b => r(b || file), 'image/jpeg', .88)); } catch (e) { return file; }
+}
+async function guardarProducto(btn) {
+  const msg = $('#p-msg'); msg.hidden = true;
+  const datos = { c: $('#p-c').value, puffs: $('#p-puffs').value.trim(), u: Number($('#p-u').value) || 0, x5: Number($('#p-x5').value) || 0, disp: $('#p-disp').value, nov: $('#p-nov').value.trim(), oculto: $('#p-oc').checked };
+  datos.x10 = datos.x5;
+  const actual = TODOS.find(p => p.id === edId), base = actual && actual.base;
+  const n = base ? actual.n : $('#p-n').value.trim();
+  if (!n) { msg.hidden = false; msg.textContent = 'Escribe el nombre del producto.'; return; }
+  const id = edId || 'x-' + Date.now().toString(36), files = {};
+  if (edFoto) { const ruta = `img/${id}-${Date.now().toString(36)}.jpg`; files[ruta] = edFoto; datos.img = ruta; IMG_LOCAL[id] = URL.createObjectURL(edFoto); }
+  let aj = AJ, ex = EX;
+  if (base) { aj = { ...AJ, [id]: { ...(AJ[id] || {}), ...datos } }; files['ajustes.json'] = { content: JSON.stringify(aj, null, 1), contentType: 'application/json' }; }
+  else { const nuevo = { ...(actual || {}), id, n, s: n.slice(0, 4).toUpperCase(), nuevo: !actual, ...datos }; delete nuevo.extra; delete nuevo.base; ex = actual ? EX.map(p => p.id === id ? nuevo : p) : [...EX, nuevo]; files['extras.json'] = { content: JSON.stringify(ex, null, 1), contentType: 'application/json' }; }
+  btn.disabled = true;
+  try { await art.publish(files); AJ = aj; EX = ex; mezclar(); pintarPromos(); render(); listaProductos(); }
+  catch (e) { delete IMG_LOCAL[id]; msg.hidden = false; msg.textContent = e?.code === 'capability_disabled' || e?.code === 'not_granted' ? 'Desde aquí no se puede guardar (por ejemplo, si el catálogo tiene enlace público). Pídele a Claude en el chat que lo haga.' : e?.code === 'conflict' ? 'Se guardó otra versión al mismo tiempo. La página se va a recargar; vuelve a intentarlo.' : 'No se pudo guardar. Intenta de nuevo en un momento.'; }
+  finally { btn.disabled = false; }
+}
+async function quitarExtra(btn) {
+  const ex = EX.filter(p => p.id !== edId); btn.disabled = true;
+  try { await art.publish({ 'extras.json': { content: JSON.stringify(ex, null, 1), contentType: 'application/json' } }); EX = ex; mezclar(); render(); listaProductos(); }
+  catch (e) { const m = $('#p-msg'); m.hidden = false; m.textContent = 'No se pudo quitar. Intenta de nuevo.'; } finally { btn.disabled = false; }
+}
+$('#dueno-p').addEventListener('click', () => { listaProductos(); $('#edp').showModal(); });
+$('#edp').addEventListener('click', async e => {
+  if (e.target.closest('[data-pcerrar]')) { $('#edp').close(); return; }
+  const ed = e.target.closest('[data-pedit]'); if (ed) { formProducto(TODOS.find(p => p.id === ed.dataset.pedit)); return; }
+  if (e.target.id === 'edp-nuevo') { formProducto(null); return; }
+  if (e.target.id === 'p-volver') { listaProductos(); return; }
+  if (e.target.id === 'p-guardar') { await guardarProducto(e.target); return; }
+  if (e.target.id === 'p-borrar') { await quitarExtra(e.target); }
+});
+$('#ed-prod').addEventListener('change', syncEd); $('#ed-tipo').addEventListener('change', syncEd);
+$('#ed').addEventListener('click', async e => {
+  if (e.target.closest('[data-cerrar]')) { $('#ed').close(); return; }
+  const q = e.target.closest('[data-quitar]'); if (q) { const l = PROMOS.filter((_, i) => i !== Number(q.dataset.quitar)); await guardar(l, q); }
+});
+$('#ed-add').addEventListener('click', async e => {
+  const precio = Number($('#ed-precio').value), msg = $('#ed-msg');
+  if (!(precio > 0)) { msg.hidden = false; msg.textContent = 'Escribe el precio de la promoción.'; return; }
+  const x = { id: Date.now().toString(36), p: $('#ed-prod').value, precio, antes: Number($('#ed-antes').value) || 0, min: Math.max(1, Number($('#ed-min').value) || 1), tipo: $('#ed-tipo').value,
+    fecha: $('#ed-fecha').value, dia: Number($('#ed-dow').value), desde: $('#ed-hd').value || '00:00', hasta: $('#ed-hh').value || '23:59', txt: $('#ed-txt').value.trim() };
+  if (x.tipo === 'semanal') delete x.fecha; else delete x.dia;
+  if (await guardar([...PROMOS.filter(p => !(p.tipo === 'dia' && p.fecha < isoHoy())), x], e.target)) { $('#ed-precio').value = ''; $('#ed-txt').value = ''; }
+});
+$('#g-si').addEventListener('click', () => { try { sessionStorage.setItem('k420-edad', '1'); } catch (e) {} entrar(); });
+$('#g-no').addEventListener('click', () => { $('#g-msg').hidden = false; $('#g-si').disabled = true; });
+try { if (sessionStorage.getItem('k420-edad') === '1') entrar(); } catch (e) {}
+</script>
+
+</body></html>
