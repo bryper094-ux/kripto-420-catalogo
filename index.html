@@ -169,7 +169,7 @@ dialog.ed::backdrop{background:rgba(0,0,0,.7)}
 
 <script>
 const WA = '573228204291';
-const CATS = [['todos', 'Todos'], ['desechable', 'Desechables'], ['pod', 'Pods y baterías'], ['capsula', 'Cápsulas y esencias']];
+const CATS = [['todos', 'Todos'], ['oferta', 'Ofertas al detal'], ['desechable', 'Desechables'], ['pod', 'Pods y baterías'], ['capsula', 'Cápsulas y esencias']];
 let P = [];
 const $ = s => document.querySelector(s);
 const DIAS = ['domingo', 'lunes', 'martes', 'miércoles', 'jueves', 'viernes', 'sábado'];
@@ -212,6 +212,7 @@ const norm = s => String(s).toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g, '
 function precios(p) {
   const x = promoDe(p.id);
   if (x) return `<div class="ppromo"><span>${x.antes ? `<s>${cop(x.antes)}</s> ` : ''}<b>${cop(x.precio)}</b></span><small>${x.min > 1 ? 'desde ' + x.min + ' und · ' : ''}hasta ${x.hasta}</small></div>`;
+  if (p.oferta) return `<div class="ppromo"><span>${p.antes ? `<s>${cop(p.antes)}</s> ` : ''}<b>${cop(p.u)}</b></span><small>oferta solo al detal</small></div>`;
   if (!p.u && !p.x5 && !p.x10) return '<div class="consulta">Precio por WhatsApp</div>';
   const c = (t, v) => `<div><small>${t}</small><b class="${v ? '' : 'na'}">${v ? cop(v) : '—'}</b></div>`;
   return `<div class="precios">${c('Al detal', p.u)}${c('Por mayor · desde 10', p.x10 || p.x5)}</div>`;
@@ -221,9 +222,9 @@ const precioOrden = p => p.x10 || p.x5 || p.u || 1e9;
 function render() {
   $('#cats').innerHTML = CATS.map(([k, t]) => `<button class="chip" type="button" data-cat="${k}" aria-pressed="${st.cat === k}">${t}</button>`).join('');
   const L = P.filter(p => p.disp !== 'agotado' && (st.cat === 'todos' || p.c === st.cat) && (!st.q || norm(p.n + ' ' + p.s).includes(norm(st.q))))
-    .sort((a, b) => precioOrden(a) - precioOrden(b) || (a.u || 0) - (b.u || 0));
-  $('#grid').innerHTML = L.length ? L.map(p => { const q = st.qty[p.id] || 0; const pr = promoDe(p.id); return `<article class="card ${q ? 'sel' : ''} ${pr ? 'prom' : ''}">
-    <div class="mono${imgDe(p) ? ' wm' : ''}">${pr ? '<span class="badge">Promo hoy</span>' : p.nuevo || p.nov ? '<span class="badge">Nuevo</span>' : ''}${imgDe(p) ? `<img src="${imgDe(p)}" alt="${p.n}" loading="lazy">` : `<span>${p.s}</span>`}<em class="puffs">${p.puffs}${/\d/.test(p.puffs) && !/c\/u/.test(p.puffs) ? ' puffs' : ''}</em></div>
+    .sort((a, b) => (b.oferta ? 1 : 0) - (a.oferta ? 1 : 0) || precioOrden(a) - precioOrden(b) || (a.u || 0) - (b.u || 0));
+  $('#grid').innerHTML = L.length ? L.map(p => { const q = st.qty[p.id] || 0; const pr = promoDe(p.id); return `<article class="card ${q ? 'sel' : ''} ${pr || p.oferta ? 'prom' : ''}">
+    <div class="mono${imgDe(p) ? ' wm' : ''}">${pr ? '<span class="badge">Promo hoy</span>' : p.oferta ? '<span class="badge">Oferta</span>' : p.nuevo || p.nov ? '<span class="badge">Nuevo</span>' : ''}${imgDe(p) ? `<img src="${imgDe(p)}" alt="${p.n}" loading="lazy">` : `<span>${p.s}</span>`}<em class="puffs">${p.puffs}${/\d/.test(p.puffs) && !/c\/u/.test(p.puffs) ? ' puffs' : ''}</em></div>
     <div class="body"><span class="cat">${CATS.find(c => c[0] === p.c)[1]}</span><h3>${p.n}</h3>${p.nov ? `<div class="nov">${String(p.nov).replace(/</g, '&lt;')}</div>` : ''}${precios(p)}
       <div class="pie"><span class="disp ${p.disp === 'pocas' ? 'poc' : 'ok'}">${p.disp === 'pocas' ? 'Últimas unidades' : 'Disponible'}</span>
         <div class="step" role="group" aria-label="Cantidad de ${p.n}"><button type="button" data-menos="${p.id}" aria-label="Quitar uno">−</button><output>${q}</output><button type="button" data-mas="${p.id}" aria-label="Agregar uno">+</button></div></div></div></article>`; }).join('')
