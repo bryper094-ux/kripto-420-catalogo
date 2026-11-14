@@ -25,7 +25,7 @@
   "disp": "ok",
   "nuevo": false,
   "nov": "",
-  "img": "img/kp-02-141725.jpg"
+  "img": "img/kp-02-c.jpg"
  },
  {
   "id": "kp-03",
@@ -39,7 +39,7 @@
   "disp": "ok",
   "nuevo": false,
   "nov": "",
-  "img": "img/kp-03-141725.jpg"
+  "img": "img/kp-03-c.jpg"
  },
  {
   "id": "kp-04",
@@ -53,7 +53,7 @@
   "disp": "ok",
   "nuevo": false,
   "nov": "",
-  "img": "img/kp-04-141725.jpg"
+  "img": "img/kp-04-c.jpg"
  },
  {
   "id": "kp-05",
@@ -137,7 +137,7 @@
   "disp": "ok",
   "nuevo": false,
   "nov": "",
-  "img": "img/kp-10-141725.jpg"
+  "img": "img/kp-10-c.jpg"
  },
  {
   "id": "kp-11",
@@ -165,7 +165,7 @@
   "disp": "ok",
   "nuevo": false,
   "nov": "",
-  "img": "img/kp-12-141725.jpg"
+  "img": "img/kp-12-c.jpg"
  },
  {
   "id": "kp-13",
@@ -179,7 +179,7 @@
   "disp": "ok",
   "nuevo": false,
   "nov": "",
-  "img": "img/kp-13-141725.jpg"
+  "img": "img/kp-13-c.jpg"
  },
  {
   "id": "kp-14",
@@ -193,7 +193,7 @@
   "disp": "ok",
   "nuevo": false,
   "nov": "",
-  "img": "img/kp-14-141725.jpg"
+  "img": "img/kp-14-c.jpg"
  },
  {
   "id": "kp-15",
@@ -207,7 +207,7 @@
   "disp": "ok",
   "nuevo": false,
   "nov": "",
-  "img": "img/kp-15-141725.jpg"
+  "img": "img/kp-15-c.jpg"
  },
  {
   "id": "kp-16",
@@ -221,7 +221,7 @@
   "disp": "ok",
   "nuevo": false,
   "nov": "",
-  "img": "img/kp-16-141725.jpg"
+  "img": "img/kp-16-c.jpg"
  },
  {
   "id": "kp-20",
@@ -235,7 +235,7 @@
   "disp": "ok",
   "nuevo": false,
   "nov": "",
-  "img": "img/kp-20-141725.jpg"
+  "img": "img/kp-20-c.jpg"
  },
  {
   "id": "kp-21",
@@ -277,7 +277,7 @@
   "disp": "ok",
   "nuevo": true,
   "nov": "",
-  "img": "img/kp-24.jpg"
+  "img": "img/kp-24-c.jpg"
  },
  {
   "id": "kp-25",
@@ -291,6 +291,6 @@
   "disp": "ok",
   "nuevo": true,
   "nov": "",
-  "img": "img/kp-25.jpg"
+  "img": "img/kp-25-c.jpg"
  }
 ]

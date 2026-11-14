@@ -29,7 +29,7 @@ header{display:flex;align-items:center;gap:16px;padding-block:22px 6px;border-bo
 .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:14px}
 .card{background:var(--surface);border:1px solid var(--line);border-radius:12px;overflow:hidden;display:flex;flex-direction:column;min-width:0}
 .card.sel{border-color:var(--gold)}
-.mono{aspect-ratio:16/9;max-width:100%;display:grid;place-items:center;background:radial-gradient(120% 90% at 30% 20%,#2a2419 0%,#12100d 70%);border-bottom:1px solid var(--line);position:relative}
+.mono{aspect-ratio:4/3;max-width:100%;display:grid;place-items:center;background:radial-gradient(120% 90% at 30% 20%,#2a2419 0%,#12100d 70%);border-bottom:1px solid var(--line);position:relative}
 .mono img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
 .mono.wm::after{content:"";position:absolute;right:10px;top:10px;width:34px;height:34px;border-radius:50%;background:url("kripto-emblema.jpg") center/112% no-repeat;opacity:.38;mix-blend-mode:screen;pointer-events:none}
 .mono span{font:700 clamp(28px,5vw,40px)/1 var(--display);letter-spacing:.08em;color:var(--gold)}
